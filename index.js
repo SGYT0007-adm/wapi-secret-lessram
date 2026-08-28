@@ -43,7 +43,8 @@ let latestQR = null;
 let connectionStatus = 'connecting';
 
 function requireApiKey(req, res, next) {
-  if (req.headers['apikey'] !== API_KEY) {
+  const key = req.headers['apikey'] || req.query.apikey;
+  if (key !== API_KEY) {
     return res.status(401).json({ error: 'Invalid or missing apikey header' });
   }
   next();

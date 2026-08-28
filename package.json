@@ -1,0 +1,19 @@
+{
+  "name": "baileys-app",
+  "version": "1.0.0",
+  "description": "Minimal Baileys WhatsApp API server with Postgres-backed session persistence, for Render deployment.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "express": "^4.21.1",
+    "pg": "^8.13.1",
+    "pino": "^9.5.0",
+    "qrcode": "^1.5.4"
+  }
+}
